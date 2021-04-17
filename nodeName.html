@@ -14,7 +14,11 @@
   </body>
   <script>
     var x = document.getElementById("myDiv");
-    var y = x.childNodes[1].nodeName;
-    console.log(y);
+    if (x.firstChild === "#text") {
+      console.log("You are right");
+    } else {
+      console.log("an error is there");
+    }
+    console.log(x.childNodes[0].innerHTML);
   </script>
 </html>
