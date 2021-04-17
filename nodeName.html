@@ -7,18 +7,21 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="myDiv">
-      <p>My name is Kilvish</p>
-      <p>I work under Andhera</p>
+    <div id="cal">
+      <p>Southern Cal is sunny.</p>
+      <p>Northern Cal is rainy.</p>
+      <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+      <p>Urban NY is crowded.</p>
+      <p>Rural NY is sparse.</p>
     </div>
   </body>
   <script>
-    var x = document.getElementById("myDiv");
-    if (x.firstChild === "#text") {
-      console.log("You are right");
-    } else {
-      console.log("an error is there");
-    }
-    console.log(x.childNodes[0].innerHTML);
+    var p = document.getElementById("cal");
+    var contents = (p.childNodes[3].innerHTML = "My name is Anthoni "); //Replacing content in html form
+    //If I put p.childNodes[2] is shows undefined because of the white space between them
+
+    console.log(p.childNodes[3].nodeName); //Showing node name
   </script>
 </html>
