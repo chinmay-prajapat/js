@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="cal">
+      <h1>My null</h1>
       <p>Southern Cal is sunny.</p>
       <p>Northern Cal is rainy.</p>
       <p>Eastern Cal is desert.</p>
@@ -19,9 +20,17 @@
   </body>
   <script>
     var p = document.getElementById("cal");
+    console.log(p.childNodes[3].nodeName);
+    // if(p.firstChild[3].nodeType)
+    if (p.childNodes[2].nodeType === 1) {
+      console.log("yes correct");
+    } else {
+      console.log("Nope");
+    }
+
     var contents = (p.childNodes[3].innerHTML = "My name is Anthoni "); //Replacing content in html form
     //If I put p.childNodes[2] is shows undefined because of the white space between them
-
-    console.log(p.childNodes[3].nodeName); //Showing node name
+    var x = p.childNodes[3];
+    // console.log(p.childNodes[1].nodeType); //Showing node name
   </script>
 </html>
