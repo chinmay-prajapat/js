@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="cal">
+      <h1>My null</h1>
+      <p>Southern Cal is sunny.</p>
+      <p>Northern Cal is rainy.</p>
+      <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+      <p>Urban NY is crowded.</p>
+      <p>Rural NY is sparse.</p>
+    </div>
+  </body>
+  <script>
+    var parentNode = document.getElementById("cal");
+    var child = parentNode.childNodes;
+    console.log(child);
+  </script>
+</html>
