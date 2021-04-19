@@ -28,5 +28,13 @@
     myNew.appendChild(newChild); // Appending (<p>) to Div
     console.log(myNew);
     console.log(document.getElementById("myBody").appendChild(myNew));
+    console.log(myNew.firstChild);
+    // var beforeThis = document.getElementById("myDiv").firstChild;
+    myNew.insertBefore(
+      document
+        .createElement("p") //Creating a <p> element
+        .appendChild(document.createTextNode("This is second Element")), //Appending into <p> Element
+      myNew.firstChild //Appending before this child of myNew(first Element of div with id="myDiv")
+    );
   </script>
 </html>
