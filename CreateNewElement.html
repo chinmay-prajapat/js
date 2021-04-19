@@ -19,13 +19,13 @@
     </div>
   </body>
   <script>
-    var myNew = document.createElement("div");
-    myNew.setAttribute("id", "myDiv");
+    var myNew = document.createElement("div"); //Creating new Element
+    myNew.setAttribute("id", "myDiv"); //Setting up new Attribute id to it
     console.log(myNew.attributes);
-    var newChild = document.createElement("p");
-    var text = document.createTextNode("Hello World");
-    newChild.appendChild(text);
-    myNew.appendChild(newChild);
+    var newChild = document.createElement("p"); //Creating P element
+    var text = document.createTextNode("Hello World"); //Creating text
+    newChild.appendChild(text); // Appedning text to element(<p>) newChild
+    myNew.appendChild(newChild); // Appending (<p>) to Div
     console.log(myNew);
     console.log(document.getElementById("myBody").appendChild(myNew));
   </script>
