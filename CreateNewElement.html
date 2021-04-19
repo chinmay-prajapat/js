@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="myBody">
+    <div id="cal">
+      <h1>My null</h1>
+      <p>Southern Cal is sunny.</p>
+      <p>Northern Cal is rainy.</p>
+      <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+      <p>Urban NY is crowded.</p>
+      <p>Rural NY is sparse.</p>
+    </div>
+  </body>
+  <script>
+    var myNew = document.createElement("div");
+    myNew.setAttribute("id", "myDiv");
+    console.log(myNew.attributes);
+    var newChild = document.createElement("p");
+    var text = document.createTextNode("Hello World");
+    newChild.appendChild(text);
+    myNew.appendChild(newChild);
+    console.log(myNew);
+    console.log(document.getElementById("myBody").appendChild(myNew));
+  </script>
+</html>
