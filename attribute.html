@@ -24,5 +24,10 @@
     div1.setAttribute("class", "special"); //Set Attribute called class in div with id=cal
     console.log(div1.hasAttribute("class")); // Has attribute class?
     console.log(div1.getAttribute("class")); // To get the property or value of class attribute
+    console.log(div1.attributes); //Gives collection of attributes
+    console.log(div1.attributes[0]); //Gives first Attribute of div
+    console.log(div1.attributes.length); //Gives total number of attributes
+    console.log(div1.attributes[0].nodeName); //Gives name of attribute
+    console.log(div1.attributes[1].nodeValue); //Gives value of attribute
   </script>
 </html>
