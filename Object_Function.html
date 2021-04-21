@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div">
+      <h1>Let's calculate discount</h1>
+      <p id="total"></p>
+      <button onclick="plan1.myFun();">Click Me</button>
+    </div>
+  </body>
+  <script>
+    var plan1 = {
+      name: "Basic",
+      Duration: 28,
+      MonthlyFee: 1000,
+      discountMonth: [3, 11],
+
+      myFun: function (disc) {
+        var parent = document.getElementById("div");
+        var disc = prompt("enter your discount");
+        var date = new Date();
+        var month = date.getMonth();
+
+        for (var i = 0; i < plan1.discountMonth.length; i++) {
+          if (plan1.discountMonth[i] === month) {
+            var total = plan1.MonthlyFee * disc;
+            document.getElementById("total").innerHTML = total;
+          }
+        }
+        return console.log(plan1.MonthlyFee * 12);
+      },
+    };
+  </script>
+</html>
