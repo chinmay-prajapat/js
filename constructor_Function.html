@@ -10,17 +10,20 @@
     <h1>This is constructor page</h1>
   </body>
   <script>
-    function Plan(name, age, salary) {
-      this.fullName = name;
-      this.old = age;
-      this.earning = salary;
-      this.fun = function (num) {
-        num = this.old + this.old;
-        return num;
+    function Myfun(name, price, weight, discount) {
+      this.name = name;
+      this.price = price;
+      this.weight = weight;
+      this.discount = discount;
+      this.disFun = function (percent) {
+        if (this.price >= this.discount) {
+          var dis = this.price * percent;
+          var pay = this.price - dis;
+        }
+        return pay;
       };
     }
-    var obj = new Plan("chinmay", 20, 200000);
-    console.log(obj.fullName);
-    console.log(obj.fun(10));
+    var obj = new Myfun("Sugar", 200, 15, 150);
+    console.log(obj.disFun(0.2));
   </script>
 </html>
