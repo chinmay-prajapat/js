@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>This is Constructor</div>
+  </body>
+  <script>
+    var Plan = function (name, age, salary) {
+      this.name = name;
+      this.age = age;
+      this.salary = salary;
+      this.fun = function (salary) {
+        var gross = salary * 0.5;
+        return gross;
+        console.log(gross);
+      };
+      console.log(this.name + " " + this.fun(this.salary));
+    };
+    var basic = new Plan("chinmay", 27, 230000);
+    var gap = new Plan("Yak", 30, 800000);
+  </script>
+</html>
