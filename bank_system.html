@@ -20,6 +20,7 @@
       if (myName === "chinmay" && pass === "chinmay") {
         return true;
       } else {
+        throw new Error("Invalid username and password");
         return false;
       }
     };
@@ -64,8 +65,15 @@
                 break;
             }
           } while (true);
+        } else {
+          alert("Invalid account number");
         }
       }
     };
+    try {
+      myBank();
+    } catch (error) {
+      alert("Invalid " + error);
+    }
   </script>
 </html>
