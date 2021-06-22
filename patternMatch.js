@@ -27,7 +27,7 @@ function main() {
     const firstMultipleInput = readLine().replace(/\s+$/g, "").split(" ");
 
     const firstName = firstMultipleInput[0];
-    //my commit
+
     const emailID = firstMultipleInput[1];
     if (/@gmail/.test(emailID)) {
       myArr.push(firstName);
