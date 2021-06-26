@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #myImg {
+      display: block;
+      height: 500px;
+    }
+  </style>
+  <body>
+    <div>
+      <img
+        src="img/pexels-jc-siller-6948610.jpg"
+        id="myImg"
+        onmouseover="myFun(id,'img/pexels-thirdman-5862315.jpg');"
+        onmouseout="myFun2(id,'img/pexels-jc-siller-6948610.jpg');"
+      />
+      <p>This is the show</p>
+      <p>This is blue</p>
+      <p>This is red</p>
+      <p>This is yellow</p>
+    </div>
+    <div id="div2">
+      <p>This is div 2</p>
+      <p>This is div below the div2</p>
+    </div>
+  </body>
+  <script>
+    function myFun(id, picture) {
+      document.getElementById(id).src = picture;
+    }
+    function myFun2(id, picture) {
+      document.getElementById(id).src = picture;
+    }
+    var para = document.getElementsByTagName("p");
+    for (var i = 0; i < para.length; i++) {
+      // console.log(para[0]);
+
+      var myPara = para[0].innerHTML;
+    }
+
+    var e = document.getElementById("div2");
+    // console.log(e);
+    //this is another branch
+    var paragraphs = e.getElementsByTagName("p");
+    for (var i = 0; i < paragraphs.length; i++) {
+      console.log(paragraphs[i].innerHTML);
+    }
+    // console.log(para[1].innerHTML);
+  </script>
+</html>
