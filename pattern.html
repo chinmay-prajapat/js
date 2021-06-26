@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1 id="h1"></h1></div>
+  </body>
+  <script>
+    myFun = (x) => {
+      var str = "";
+      for (var i = 0; i < x; i++) {
+        for (var j = 0; j <= x - i - 1; j++) {
+          str += " ";
+        }
+        for (var k = 0; k <= i; k++) {
+          str += "#";
+        }
+        str += "\n";
+      }
+      return str;
+      //   console.log(str);
+    };
+    document.getElementById("h1").innerHTML = myFun(5);
+  </script>
+</html>

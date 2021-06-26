@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function processData(input) {
+      //Enter your code here
+      //         let inputCopy = input.split("\n").slice(1);
+      // var output=["Hacker", "rank"];
+      var even = "";
+      var odd = "";
+      var output = "";
+
+      for (var i = 0; i < input.length; i++) {
+        output = input[i];
+        even = "";
+        odd = "";
+        for (var j = 0; j < output.length; j++) {
+          if (j % 2 === 0) {
+            even += output[j];
+          } else {
+            odd += output[j];
+          }
+        }
+        console.log(even + " " + odd);
+      }
+    }
+    processData(["Hacker", "Rank"]);
+  </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1 id="h1"></h1></div>
+  </body>
+  <!-- <script>
+    myFun = (str) => {
+      if (str === "") {
+        return "";
+      } else {
+        for (var i = 0; i < str.length; i++) {
+          if (str[i] === str[str.length - 1]) {
+            return "the string is palindrome";
+          } else {
+            return "the string is not palindrome";
+          }
+        }
+      }
+    };
+    document.getElementById("h1").innerHTML = myFun("madam");
+  </script> -->
+  <script>
+    //recursion
+    var isPalindrome = (str) => {
+      if (str.length < 2) {
+        return true;
+      } else if (str[0] !== str[str.length - 1]) {
+        return false;
+      } else {
+        return isPalindrome(str.slice(1, -1));
+      }
+    };
+    console.log(isPalindrome("madam"));
+  </script>
+</html>

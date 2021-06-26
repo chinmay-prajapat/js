@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onSubmit="return checkForLastName();">
+      <!-- return keyword is important here to match with return in the function -->
+      Please enter your last name.<br />
+      <input type="text" id="lastNameField" />
+      <input type="submit" value="Submit Form" />
+    </form>
+  </body>
+  <script>
+    function checkForLastName() {
+      var targetId = document.getElementById("lastNameField");
+      if (targetId.value.length === 0) {
+        alert("Please enter your name");
+        targetId.focus();
+        targetId.style.backgroundColor = "red";
+      }
+      return false; //this false stops the form to submit without satisfying the function
+    }
+  </script>
+</html>

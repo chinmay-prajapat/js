@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1 id="h1"></h1></div>
+  </body>
+  <script>
+    function main(n) {
+      var output = [];
+      var l = [];
+      var temp = "";
+      var large = 0;
+      var myNo = n;
+      var count = 0;
+      while (myNo > 0) {
+        output.push(myNo % 2);
+        myNo = Math.floor(myNo / 2);
+      }
+
+      temp = output.join("").split("0").slice(0);
+      for (var i = 0; i < temp.length; i++) {
+        l.push(temp[i].length);
+      }
+      large = l[0];
+      for (var j = 0; j < l.length; j++) {
+        if (large < l[j + 1]) {
+          large = l[j + 1];
+        } else {
+          large = large;
+        }
+      }
+      document.getElementById("h1").innerHTML = large;
+    }
+    main(12);
+  </script>
+</html>
+<!-- output 
+    Binary of 12 is 0011, so the group is two 1 1;
+-->

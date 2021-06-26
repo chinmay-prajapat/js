@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1 id="h1"></h1></div>
+  </body>
+  <script>
+    // var myFun = (str) => {                                    //This is recursion function
+    //   if (str === "") {                                      //First character of the string is going to add at last place and the substring is going to shrink as per iteration
+    //     return "";                                          // After str=== "" then the stack starts to empty by popping one by one character of the string
+    //   } else {
+    //     return myFun(str.substr(1)) + str.charAt(0);
+
+    //   }
+    // };
+    myFun("chinmay");
+    var myStr = (strings) => {
+      if (strings.length < 0) {
+        return null;
+      } else {
+        var output = [];
+        for (var i = strings.length - 1; i >= 0; --i) {
+          output.push(strings[i]);
+        }
+      }
+
+      return output.join("");
+    };
+    var myName = "chinmay";
+    document.getElementById("h1").innerHTML = myStr(myName);
+
+    /*without using array*/
+
+    //     var myStr = strings =>{
+    // if(strings.length < 0){
+    // return null;
+    // }
+    // else
+    // {
+
+    // var output = '';
+    // for(var i=strings.length-1;i>=0;--i){
+    //     output+=strings[i];
+    // }
+
+    // }
+
+    // return console.log(output);
+    // }
+    // var myName = "chinmay";
+    // myStr(myName);
+  </script>
+</html>

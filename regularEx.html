@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1 id="h1"></h1></div>
+  </body>
+  <script>
+    var re = new RegExp("^(a|e|i|o|u)(.).*\\1$"); // ^gives first char.
+    //(.)locked the first match
+    //.* Match the charcter except locked to last.
+    //\1  match the first charcter which has been matched
+    // $give last character
+    var output = re.test("achinmya");
+    document.getElementById("h1").innerHTML = output;
+  </script>
+</html>
+<!-- ^ asserts position at start of the string
+1st Capturing Group (.)
+.* matches any character (except newline) - between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+\1 matches the same text as most recently matched by the 1st capturing group
+$ asserts position at the end of the string -->

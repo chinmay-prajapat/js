@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="myBody">
+    <div id="cal">
+      <h1>My null</h1>
+      <p>Southern Cal is sunny.</p>
+      <p>Northern Cal is rainy.</p>
+      <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+      <p>Urban NY is crowded.</p>
+      <p>Rural NY is sparse.</p>
+    </div>
+  </body>
+  <script>
+    var myNew = document.createElement("div"); //Creating new Element
+    myNew.setAttribute("id", "myDiv"); //Setting up new Attribute id to it
+    console.log(myNew.attributes);
+    var newChild = document.createElement("p"); //Creating P element
+    var text = document.createTextNode("Hello World"); //Creating text
+    newChild.appendChild(text); // Appedning text to element(<p>) newChild
+    myNew.appendChild(newChild); // Appending (<p>) to Div
+    console.log(myNew);
+    console.log(document.getElementById("myBody").appendChild(myNew));
+    console.log(myNew.firstChild);
+    // var beforeThis = document.getElementById("myDiv").firstChild;
+    myNew.insertBefore(
+      document
+        .createElement("p") //Creating a <p> element
+        .appendChild(document.createTextNode("This is second Element")), //Appending into <p> Element
+      myNew.firstChild //Appending before this child of myNew(first Element of div with id="myDiv")
+    );
+    console.log(myNew.childNodes[0]);
+  </script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is constructor page</h1>
+  </body>
+  <script>
+    function Myfun(name, price, weight, discount) {
+      this.name = name;
+      this.price = price;
+      this.weight = weight;
+      this.discount = discount;
+      this.disFun = function (percent) {
+        if (this.price >= this.discount) {
+          var dis = this.price * percent;
+          var pay = this.price - dis;
+        }
+        return pay;
+      };
+    }
+    var obj = new Myfun("Sugar", 200, 15, 150);
+    console.log(obj.disFun(0.2));
+  </script>
+</html>
