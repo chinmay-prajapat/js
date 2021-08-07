@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+*.log
+haters/
+.idea/
+01 - JavaScript Drum Kit/index-FINISHED.html
